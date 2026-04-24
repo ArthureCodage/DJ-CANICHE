@@ -1,0 +1,10 @@
+services:
+  bot:
+    build: .
+    container_name: youtube_music_bot
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+    # On ne monte pas de volume pour les téléchargements pour garder la vitesse de la RAM

@@ -1,0 +1,15 @@
+# Secrets
+.env
+bot.log
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+
+# Bot Data
+downloads/
+music_cache/
