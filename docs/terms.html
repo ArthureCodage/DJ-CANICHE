@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditions d'Utilisation — DJ-CANICHE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0e1015;
+            --bg-secondary: #171922;
+            --bg-card: #1f222e;
+            --border-color: rgba(255, 255, 255, 0.08);
+            --accent: #5865F2;
+            --accent-hover: #4752C4;
+            --text-main: #f2f3f5;
+            --text-muted: #949ba4;
+            --badge-bg: rgba(88, 101, 242, 0.15);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 0;
+            margin: 0;
+        }
+
+        header {
+            background-color: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(12px);
+        }
+
+        .nav-container {
+            max-width: 960px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 24px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 800;
+            font-size: 1.25rem;
+        }
+
+        .logo-icon {
+            font-size: 1.6rem;
+            background: linear-gradient(135deg, #5865F2, #8b5cf6);
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 12px;
+        }
+
+        .nav-btn {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .nav-btn:hover {
+            color: var(--text-main);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .nav-btn.active {
+            color: #fff;
+            background: var(--accent);
+        }
+
+        main {
+            max-width: 840px;
+            margin: 40px auto;
+            padding: 0 24px 80px;
+        }
+
+        .hero-banner {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: var(--badge-bg);
+            color: #818cf8;
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 6px 14px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 16px;
+            border: 1px solid rgba(88, 101, 242, 0.25);
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            background: linear-gradient(135deg, #fff 0%, #cbd5e1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .last-updated {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .content-card {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 36px;
+            margin-bottom: 24px;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #fff;
+            margin-top: 28px;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2:first-of-type {
+            margin-top: 0;
+        }
+
+        p {
+            color: #dbdee1;
+            margin-bottom: 16px;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+            color: #dbdee1;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .alert-box {
+            background: rgba(88, 101, 242, 0.1);
+            border-left: 4px solid var(--accent);
+            padding: 16px 20px;
+            border-radius: 8px;
+            margin: 24px 0;
+            color: #e0e7ff;
+            font-size: 0.95rem;
+        }
+
+        footer {
+            border-top: 1px solid var(--border-color);
+            background: var(--bg-secondary);
+            text-align: center;
+            padding: 32px 24px;
+            color: var(--text-muted);
+            font-size: 0.88rem;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 640px) {
+            h1 { font-size: 1.8rem; }
+            .content-card { padding: 24px 18px; }
+            .nav-container { flex-direction: column; gap: 14px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🐩</span>
+                <span>DJ-CANICHE</span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html" class="nav-btn">Accueil</a>
+                <a href="terms.html" class="nav-btn active">Conditions d'Utilisation</a>
+                <a href="privacy.html" class="nav-btn">Confidentialité</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="hero-banner">
+            <span class="badge">Mentions Légales</span>
+            <h1>Conditions Générales d'Utilisation</h1>
+            <p class="last-updated">Dernière mise à jour : 11 septembre 2026</p>
+        </div>
+
+        <div class="content-card">
+            <h2>1. Acceptation des Conditions</h2>
+            <p>
+                En invitant, configurant ou utilisant le bot Discord <strong>DJ-CANICHE</strong> (ci-après désigné « le Bot ») sur votre serveur Discord ou en interagissant avec lui via des commandes et des boutons, vous acceptez d'être pleinement lié par les présentes Conditions d'Utilisation.
+            </p>
+            <p>
+                Si vous n'acceptez pas l'une quelconque de ces conditions, veuillez ne pas inviter le Bot ou retirez-le immédiatement de vos serveurs.
+            </p>
+
+            <h2>2. Description du Service</h2>
+            <p>
+                <strong>DJ-CANICHE</strong> est un bot Discord public et open-source conçu pour :
+            </p>
+            <ul>
+                <li>La lecture et la diffusion de flux audio (musique, playlists) dans les salons vocaux Discord autorisés.</li>
+                <li>La création dynamique et l'auto-nettoyage de salons vocaux temporaires (« Auto-Voice »).</li>
+                <li>L'interaction avec les membres via des commandes de préfixe (<code>$play</code>, <code>$skip</code>, etc.) et des composants interactifs Discord.</li>
+            </ul>
+
+            <div class="alert-box">
+                ℹ️ <strong>Rappel :</strong> L'utilisation de DJ-CANICHE est soumise au respect des <a href="https://discord.com/terms" target="_blank" style="color: #93c5fd;">Conditions d'Utilisation de Discord</a> ainsi que des règles des plateformes tierces hébergeant les flux audio consultés.
+            </div>
+
+            <h2>3. Règles d'Utilisation et Comportements Prohibés</h2>
+            <p>En utilisant DJ-CANICHE, vous vous engagez à ne pas :</p>
+            <ul>
+                <li>Tenter de saturer, surcharger (DDoS, requêtes excessives en boucle) ou endommager les serveurs hébergeant le Bot.</li>
+                <li>Exploiter des bugs ou failles de sécurité sans en avertir préalablement l'équipe de développement.</li>
+                <li>Diffuser des flux audios ou contenus haineux, illégaux, diffamatoires ou contraires aux lois en vigueur.</li>
+                <li>Tenter de contourner les restrictions d'accès ou permissions de commandes configurées sur les serveurs.</li>
+            </ul>
+
+            <h2>4. Disponibilité du Service et Maintenance</h2>
+            <p>
+                Le Bot est fourni <em>« en l'état » (as-is)</em> et <em>« selon disponibilité »</em>. Bien que notre infrastructure s'efforce d'assurer une haute disponibilité et un monitoring en continu, aucune garantie d'uptime ininterrompu à 100% n'est accordée.
+            </p>
+            <p>
+                Des interruptions de service planifiées ou d'urgence peuvent survenir pour maintenance, mises à jour des dépendances (ex: <code>yt-dlp</code>, <code>discord.py</code>) ou amélioration des fonctionnalités.
+            </p>
+
+            <h2>5. Suspension et Exclusion</h2>
+            <p>
+                L'administrateur du Bot se réserve le droit de restreindre, suspendre ou interdire l'accès de DJ-CANICHE à un utilisateur spécifique ou à un serveur Discord entier en cas de comportement abusif, d'infraction aux présentes conditions ou d'atteinte à l'intégrité du service.
+            </p>
+
+            <h2>6. Limitation de Responsabilité</h2>
+            <p>
+                Dans la limite maximale autorisée par la loi, les créateurs et hébergeurs de DJ-CANICHE déclinent toute responsabilité en cas de perte de données, de perturbations de serveurs Discord, ou de tout dommage indirect survenant lors de l'utilisation normale ou inappropriée du Bot.
+            </p>
+
+            <h2>7. Contact</h2>
+            <p>
+                Pour toute question ou réclamation concernant ces conditions, veuillez contacter le responsable via le dépôt officiel du projet :
+                <a href="https://github.com/ArthureCodage/DJ-CANICHE" target="_blank" style="color: var(--accent); font-weight: 600;">Dépôt GitHub DJ-CANICHE</a>.
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 DJ-CANICHE • Développé pour la communauté Discord • Tous droits réservés.</p>
+        <p style="margin-top: 8px;">
+            <a href="terms.html">Conditions d'Utilisation</a> • <a href="privacy.html">Politique de Confidentialité</a>
+        </p>
+    </footer>
+
+</body>
+</html>

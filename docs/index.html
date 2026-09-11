@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJ-CANICHE — Bot Discord Officiel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0e1015;
+            --bg-secondary: #171922;
+            --bg-card: #1f222e;
+            --border-color: rgba(255, 255, 255, 0.08);
+            --accent: #5865F2;
+            --accent-hover: #4752C4;
+            --text-main: #f2f3f5;
+            --text-muted: #949ba4;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1024px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 24px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 800;
+            font-size: 1.25rem;
+        }
+
+        .logo-icon {
+            font-size: 1.6rem;
+            background: linear-gradient(135deg, #5865F2, #8b5cf6);
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 12px;
+        }
+
+        .nav-btn {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .nav-btn:hover {
+            color: var(--text-main);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .nav-btn.active {
+            color: #fff;
+            background: var(--accent);
+        }
+
+        main {
+            max-width: 1024px;
+            margin: 60px auto 100px;
+            padding: 0 24px;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .avatar-glow {
+            width: 96px;
+            height: 96px;
+            border-radius: 28px;
+            background: linear-gradient(135deg, #5865F2, #8b5cf6);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.5rem;
+            box-shadow: 0 0 40px rgba(88, 101, 242, 0.4);
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+        }
+
+        p.subtitle {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 620px;
+            margin: 0 auto 32px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+
+        .feature-card {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 28px;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(88, 101, 242, 0.4);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+
+        .feature-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .legal-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .legal-card {
+            background: linear-gradient(180deg, var(--bg-card) 0%, var(--bg-secondary) 100%);
+            border: 1px solid var(--border-color);
+            border-radius: 18px;
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.2s ease;
+        }
+
+        .legal-card:hover {
+            border-color: var(--accent);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .legal-card h2 {
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #fff;
+        }
+
+        .legal-card p {
+            color: var(--text-muted);
+            margin-bottom: 24px;
+            font-size: 0.95rem;
+        }
+
+        .btn-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--accent);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            align-self: flex-start;
+            transition: background 0.2s;
+        }
+
+        .btn-link:hover {
+            background: var(--accent-hover);
+        }
+
+        footer {
+            border-top: 1px solid var(--border-color);
+            background: var(--bg-secondary);
+            text-align: center;
+            padding: 32px 24px;
+            color: var(--text-muted);
+            font-size: 0.88rem;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            .legal-cards { grid-template-columns: 1fr; }
+            .nav-container { flex-direction: column; gap: 14px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🐩</span>
+                <span>DJ-CANICHE</span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html" class="nav-btn active">Accueil</a>
+                <a href="terms.html" class="nav-btn">Conditions d'Utilisation</a>
+                <a href="privacy.html" class="nav-btn">Confidentialité</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="hero">
+            <div class="avatar-glow">🐩</div>
+            <h1>DJ-CANICHE</h1>
+            <p class="subtitle">Le bot Discord musical haute-fidélité avec gestion automatique de salons vocaux temporaires.</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🎵</div>
+                <h3>Musique Haute Définition</h3>
+                <p>Diffusion fluide optimisée (192kbps / 48kHz), import instantané de playlists et boutons interactifs de contrôle.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔊</div>
+                <h3>Salons Temporaires</h3>
+                <p>Génération instantanée de salons privés dès qu'un membre rejoint le générateur, avec suppression automatique quand vide.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Zéro Lag & Sécurité</h3>
+                <p>Téléchargement juste-à-temps local sans saccades, respect total de la vie privée et conformité Discord Developer.</p>
+            </div>
+        </div>
+
+        <h2 style="margin-bottom: 20px; font-size: 1.6rem; color: #fff;">Documents Légaux & Conformité Discord</h2>
+        <div class="legal-cards">
+            <div class="legal-card">
+                <div>
+                    <h2>📜 Conditions d'Utilisation</h2>
+                    <p>Consultez les termes, règles d'usage, obligations et garanties applicables lors de l'utilisation de DJ-CANICHE sur votre serveur Discord.</p>
+                </div>
+                <a href="terms.html" class="btn-link">Lire les Conditions &rarr;</a>
+            </div>
+
+            <div class="legal-card">
+                <div>
+                    <h2>🔒 Politique de Confidentialité</h2>
+                    <p>Découvrez comment vos données sont traitées : aucun enregistrement vocal, stockage volatile en RAM et transparence totale RGPD.</p>
+                </div>
+                <a href="privacy.html" class="btn-link">Lire la Confidentialité &rarr;</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 DJ-CANICHE • Développé pour la communauté Discord • Tous droits réservés.</p>
+        <p style="margin-top: 8px;">
+            <a href="terms.html">Conditions d'Utilisation</a> • <a href="privacy.html">Politique de Confidentialité</a> • <a href="https://github.com/ArthureCodage/DJ-CANICHE" target="_blank">Dépôt GitHub</a>
+        </p>
+    </footer>
+
+</body>
+</html>

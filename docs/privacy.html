@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politique de Confidentialité — DJ-CANICHE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0e1015;
+            --bg-secondary: #171922;
+            --bg-card: #1f222e;
+            --border-color: rgba(255, 255, 255, 0.08);
+            --accent: #5865F2;
+            --accent-hover: #4752C4;
+            --text-main: #f2f3f5;
+            --text-muted: #949ba4;
+            --badge-bg: rgba(35, 165, 90, 0.15);
+            --badge-color: #4ade80;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 0;
+            margin: 0;
+        }
+
+        header {
+            background-color: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(12px);
+        }
+
+        .nav-container {
+            max-width: 960px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 24px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 800;
+            font-size: 1.25rem;
+        }
+
+        .logo-icon {
+            font-size: 1.6rem;
+            background: linear-gradient(135deg, #5865F2, #8b5cf6);
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 12px;
+        }
+
+        .nav-btn {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .nav-btn:hover {
+            color: var(--text-main);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .nav-btn.active {
+            color: #fff;
+            background: var(--accent);
+        }
+
+        main {
+            max-width: 840px;
+            margin: 40px auto;
+            padding: 0 24px 80px;
+        }
+
+        .hero-banner {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: var(--badge-bg);
+            color: var(--badge-color);
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 6px 14px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 16px;
+            border: 1px solid rgba(74, 222, 128, 0.25);
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            background: linear-gradient(135deg, #fff 0%, #cbd5e1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .last-updated {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .content-card {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 36px;
+            margin-bottom: 24px;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #fff;
+            margin-top: 28px;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2:first-of-type {
+            margin-top: 0;
+        }
+
+        p {
+            color: #dbdee1;
+            margin-bottom: 16px;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+            color: #dbdee1;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .highlight-box {
+            background: rgba(35, 165, 90, 0.1);
+            border-left: 4px solid #23a55a;
+            padding: 16px 20px;
+            border-radius: 8px;
+            margin: 24px 0;
+            color: #dcfce7;
+            font-size: 0.95rem;
+        }
+
+        .highlight-box.warning {
+            background: rgba(234, 179, 8, 0.1);
+            border-left: 4px solid #eab308;
+            color: #fef08a;
+        }
+
+        footer {
+            border-top: 1px solid var(--border-color);
+            background: var(--bg-secondary);
+            text-align: center;
+            padding: 32px 24px;
+            color: var(--text-muted);
+            font-size: 0.88rem;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 640px) {
+            h1 { font-size: 1.8rem; }
+            .content-card { padding: 24px 18px; }
+            .nav-container { flex-direction: column; gap: 14px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🐩</span>
+                <span>DJ-CANICHE</span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html" class="nav-btn">Accueil</a>
+                <a href="terms.html" class="nav-btn">Conditions d'Utilisation</a>
+                <a href="privacy.html" class="nav-btn active">Confidentialité</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="hero-banner">
+            <span class="badge">Vie Privée & RGPD</span>
+            <h1>Politique de Confidentialité</h1>
+            <p class="last-updated">Dernière mise à jour : 11 septembre 2026</p>
+        </div>
+
+        <div class="content-card">
+            <div class="highlight-box">
+                🛡️ <strong>En résumé :</strong> DJ-CANICHE respecte strictement votre vie privée. <strong>Aucune conversation vocale n'est écoutée ni enregistrée</strong>, et aucune donnée personnelle n'est vendue, monétisée ou partagée à des tiers.
+            </div>
+
+            <h2>1. Introduction</h2>
+            <p>
+                Cette Politique de Confidentialité décrit comment le bot Discord <strong>DJ-CANICHE</strong> (ci-après « le Bot ») collecte, utilise et protège les informations techniques nécessaires à son fonctionnement lors de son utilisation sur la plateforme Discord.
+            </p>
+
+            <h2>2. Données Collectées</h2>
+            <p>
+                DJ-CANICHE applique le principe de minimisation des données. Les seules données traitées sont strictement nécessaires à l'exécution de ses fonctionnalités :
+            </p>
+            <ul>
+                <li><strong>Identifiants Discord (IDs) :</strong> Identifiant de serveur (<code>Guild ID</code>), identifiant de salon textuel et vocal (<code>Channel ID</code>) et identifiant utilisateur (<code>User ID</code>) afin de savoir qui lance une commande ou qui a déclenché la création d'un salon vocal temporaire.</li>
+                <li><strong>Contenu des commandes :</strong> Les messages textuels adressés directement au Bot (commençant par le préfixe <code>$</code>) pour identifier le morceau de musique demandé ou l'action souhaitée.</li>
+                <li><strong>Informations de file d'attente (Queue) :</strong> Titres des musiques et URL associées en cours de lecture ou en file d'attente sur votre serveur.</li>
+            </ul>
+
+            <div class="highlight-box warning">
+                🎙️ <strong>Traitement Audio & Vocal :</strong><br>
+                DJ-CANICHE est un bot de diffusion audio uniquement (unidirectionnel). Il <strong>n'enregistre jamais</strong>, <strong>n'écoute jamais</strong> et <strong>ne stocke aucune voix ou conversation audio</strong> des membres présents dans les salons vocaux.
+            </div>
+
+            <h2>3. Utilisation des Données</h2>
+            <p>Les données techniques collectées sont utilisées exclusivement pour :</p>
+            <ul>
+                <li>Lire la musique demandée dans le salon vocal où l'utilisateur se trouve.</li>
+                <li>Gérer la liste de lecture (file d'attente, pagination, commandes de saut et de volume).</li>
+                <li>Créer dynamiquement un salon vocal privé temporaire lorsque l'utilisateur rejoint le salon générateur, puis supprimer automatiquement ce salon lorsqu'il est vide.</li>
+                <li>Résoudre les erreurs techniques et assurer la maintenance opérationnelle du service (logs d'erreurs).</li>
+            </ul>
+
+            <h2>4. Stockage et Durée de Conservation</h2>
+            <p>
+                <strong>Stockage temporaire en mémoire vive (RAM) :</strong> Les données de file d'attente musicale et d'état des salons vocaux sont stockées uniquement en mémoire vive pendant la durée de la session. Elles sont immédiatement effacées dès que la file d'attente est vidée ou lors du redémarrage du Bot.
+            </p>
+            <p>
+                <strong>Aucune base de données permanente :</strong> DJ-CANICHE ne conserve aucune base de données relationnelle persistante de profils utilisateurs ou d'historique de messages.
+            </p>
+
+            <h2>5. Partage et Divulgation des Données</h2>
+            <p>
+                Nous ne vendons, ne louons et ne transmettons aucune donnée personnelle ou technique à des tiers ou à des annonceurs publicitaires.
+            </p>
+            <p>
+                Les seules interactions réseau externes s'effectuent avec l'API Discord officielle et les fournisseurs de flux audios (ex: YouTube via l'outil open-source <code>yt-dlp</code>) pour extraire l'audio demandé.
+            </p>
+
+            <h2>6. Vos Droits (RGPD / GDPR)</h2>
+            <p>
+                Conformément à la réglementation sur la protection des données personnelles (notamment le Règlement Général sur la Protection des Données - RGPD) :
+            </p>
+            <ul>
+                <li>Vous pouvez à tout moment vider la file musicale de votre serveur à l'aide de la commande <code>$clear</code>.</li>
+                <li>Vous pouvez cesser tout traitement en expulsant le Bot de votre serveur Discord, ce qui détruit immédiatement toute donnée volatile associée au serveur.</li>
+                <li>Vous avez le droit de demander confirmation de l'absence de données stockées vous concernant.</li>
+            </ul>
+
+            <h2>7. Contact et Modifications</h2>
+            <p>
+                Cette Politique de Confidentialité peut être mise à jour pour refléter d'éventuelles évolutions des fonctionnalités du Bot ou des exigences légales de Discord.
+            </p>
+            <p>
+                Pour toute question relative à cette politique ou à vos données, vous pouvez ouvrir une issue ou nous contacter sur :
+                <a href="https://github.com/ArthureCodage/DJ-CANICHE" target="_blank" style="color: var(--accent); font-weight: 600;">GitHub ArthureCodage/DJ-CANICHE</a>.
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 DJ-CANICHE • Développé pour la communauté Discord • Tous droits réservés.</p>
+        <p style="margin-top: 8px;">
+            <a href="terms.html">Conditions d'Utilisation</a> • <a href="privacy.html">Politique de Confidentialité</a>
+        </p>
+    </footer>
+
+</body>
+</html>
