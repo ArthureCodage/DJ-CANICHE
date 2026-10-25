@@ -2,6 +2,14 @@
 
 **DJ-CANICHE** est un bot Discord polyvalent conçu pour offrir une expérience musicale de haute qualité, une intelligence artificielle réactive et une gestion automatisée de serveurs.
 
+![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB?logo=python&logoColor=white)
+![discord.py](https://img.shields.io/badge/discord.py-bot-5865F2?logo=discord&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-pr%C3%AAt-2496ED?logo=docker&logoColor=white)
+
+🌐 **Site du bot :** https://arthurecodage.github.io/DJ-CANICHE/
+
+> Installation avec Docker : remplis `.env` (voir plus bas) puis `docker compose up -d`.
+
 ## 🚀 Caractéristiques
 
 ### 🎵 Musique Haute Fidélité
@@ -30,8 +38,8 @@
 
 2. **Cloner le projet** :
    ```bash
-   git clone <ton-url-repo>
-   cd youtube_music_bot
+   git clone https://github.com/ArthureCodage/DJ-CANICHE.git
+   cd DJ-CANICHE
    ```
 
 3. **Installer les dépendances** :
